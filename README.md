@@ -102,50 +102,6 @@ npm install
 
 ---
 
-## Environment Configuration
-
-### Backend — `backend/.env`
-Copy the example file and fill in your values:
-```bash
-cp backend/.env.example backend/.env
-```
-
-```env
-PORT=5000
-MONGODB_URI=mongodb://localhost:27017/jobplatform
-REDIS_HOST=localhost
-REDIS_PORT=6379
-JWT_SECRET=your_secret_key_here
-JWT_EXPIRES_IN=7d
-NODE_ENV=development
-MAX_JOB_RETRIES=3
-JOB_RETRY_DELAY_MS=5000
-```
-
-### Worker — `worker/.env`
-```bash
-cp worker/.env.example worker/.env
-```
-
-```env
-MONGODB_URI=mongodb://localhost:27017/jobplatform
-REDIS_HOST=localhost
-REDIS_PORT=6379
-WORKER_ID=worker-1
-WORKER_NAME=Worker One
-WORKER_CONCURRENCY=3
-BACKEND_URL=http://localhost:5000
-MAX_JOB_RETRIES=3
-JOB_RETRY_DELAY_MS=5000
-```
-
-### Frontend — `frontend/.env`
-```bash
-cp frontend/.env.example frontend/.env
-```
-
-```env
-VITE_API_URL=http://localhost:5000
 ```
 
 ---
@@ -176,18 +132,9 @@ Worker worker-1 started — concurrency=3
 cd frontend
 npm run dev
 ```
-Frontend starts on `http://localhost:5173`
-
-Open `http://localhost:5173` in your browser.
 
 ---
 
-## First Time Setup
-
-1. Go to `http://localhost:5173`
-2. Register an account on the login page
-3. You will be redirected to the dashboard
-4. The worker should already be visible on the Workers page
 
 ---
 
